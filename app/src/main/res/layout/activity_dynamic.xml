@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99D4CD"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/title_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/dynamic_exit"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/left_arrow" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="动态测量"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="246dp"
+            android:layout_gravity="center"
+            android:background="@drawable/overview_bg"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/dynamic_overview"
+                android:orientation="horizontal"
+                android:layout_width="280dp"
+                android:layout_height="181dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/overview_table" >
+                <ImageView
+                    android:id="@+id/iv_canvas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="94.4dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/dynamic_result_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dynamic_time"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="12-28 12:00"
+                    android:textColor="#707070"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dynamic_bp_tx"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:text="__ / __"
+                        android:textColor="#707070"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dynamic_rate_tx"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="__"
+                        android:textColor="#707070"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="70dp"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="10dp"
+               android:orientation="vertical">
+               <Button
+                   android:id="@+id/dynamic_start_btn"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+                   android:background="@drawable/start_bg"
+                   android:text="开始"
+                   android:textColor="#FFFFFF"
+                   android:textSize="20sp"
+                   android:textStyle="bold" />
+
+               <Button
+                   android:id="@+id/clear_btn"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+                   android:layout_marginTop="5dp"
+                   android:background="@drawable/start_bg"
+                   android:text="重置"
+                   android:textColor="#FFFFFF"
+                   android:textSize="20sp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="*该模式每15分钟测一次血压,测量时请保持静坐或静卧状态"
+            android:textColor="#5D8581"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/dynamic_next_lo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="预计下次测量时间为"
+                android:textColor="#5D8581"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/dynamic_next_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="____"
+                android:textColor="#5D8581"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dynamic_measuring_lo"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.example.yourguard.RotateDotView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:rdv_dot_mode="scale"
+                app:rdv_dot_radius="3.8dp"
+                app:rdv_start_color="#5D8581" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="测量中"
+                android:textColor="#5D8581"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
